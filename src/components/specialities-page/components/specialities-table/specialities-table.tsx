@@ -48,7 +48,7 @@ class SpecialitiesTableRow extends React.Component<
         <tr className="align-middle">
           <td className="text-nowrap">
             <Button variant="none" onClick={(ev) => this.onRowExpand()}>
-              {this.state.expanded ? "v" : ">"}
+              {this.state.expanded ? <i className="bi bi-chevron-down"></i> : <i className="bi bi-chevron-right"></i>}
             </Button>
             {data.name}
           </td>
