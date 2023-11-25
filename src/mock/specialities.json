@@ -1,0 +1,792 @@
+[
+    {
+      "id": 7,
+      "name": "Speciality9",
+      "accessGroups": [
+        {
+          "id": 9,
+          "name": "AccessGroup5",
+          "accesses": [
+            {
+              "id": 7,
+              "name": "Access0"
+            },
+            {
+              "id": 3,
+              "name": "Access4"
+            },
+            {
+              "id": 6,
+              "name": "Access9"
+            },
+            {
+              "id": 8,
+              "name": "Access11"
+            },
+            {
+              "id": 11,
+              "name": "Access4"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "AccessGroup2",
+          "accesses": [
+            {
+              "id": 7,
+              "name": "Access7"
+            },
+            {
+              "id": 7,
+              "name": "Access3"
+            },
+            {
+              "id": 3,
+              "name": "Access11"
+            },
+            {
+              "id": 3,
+              "name": "Access4"
+            },
+            {
+              "id": 10,
+              "name": "Access8"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "AccessGroup9",
+          "accesses": [
+            {
+              "id": 1,
+              "name": "Access3"
+            },
+            {
+              "id": 4,
+              "name": "Access10"
+            },
+            {
+              "id": 6,
+              "name": "Access9"
+            },
+            {
+              "id": 12,
+              "name": "Access7"
+            },
+            {
+              "id": 6,
+              "name": "Access8"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "AccessGroup7",
+          "accesses": [
+            {
+              "id": 10,
+              "name": "Access7"
+            },
+            {
+              "id": 11,
+              "name": "Access2"
+            },
+            {
+              "id": 4,
+              "name": "Access11"
+            },
+            {
+              "id": 4,
+              "name": "Access11"
+            },
+            {
+              "id": 14,
+              "name": "Access8"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "AccessGroup14",
+          "accesses": [
+            {
+              "id": 5,
+              "name": "Access2"
+            },
+            {
+              "id": 6,
+              "name": "Access6"
+            },
+            {
+              "id": 12,
+              "name": "Access3"
+            },
+            {
+              "id": 8,
+              "name": "Access5"
+            },
+            {
+              "id": 5,
+              "name": "Access11"
+            }
+          ]
+        }
+      ],
+      "accesses": [
+        {
+          "id": 8,
+          "name": "Access0"
+        },
+        {
+          "id": 7,
+          "name": "Access3"
+        },
+        {
+          "id": 12,
+          "name": "Access2"
+        },
+        {
+          "id": 7,
+          "name": "Access12"
+        },
+        {
+          "id": 14,
+          "name": "Access8"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Speciality8",
+      "accessGroups": [
+        {
+          "id": 1,
+          "name": "AccessGroup1",
+          "accesses": [
+            {
+              "id": 7,
+              "name": "Access10"
+            },
+            {
+              "id": 1,
+              "name": "Access9"
+            },
+            {
+              "id": 9,
+              "name": "Access11"
+            },
+            {
+              "id": 8,
+              "name": "Access3"
+            },
+            {
+              "id": 5,
+              "name": "Access7"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "AccessGroup9",
+          "accesses": [
+            {
+              "id": 10,
+              "name": "Access9"
+            },
+            {
+              "id": 1,
+              "name": "Access10"
+            },
+            {
+              "id": 10,
+              "name": "Access4"
+            },
+            {
+              "id": 9,
+              "name": "Access6"
+            },
+            {
+              "id": 13,
+              "name": "Access6"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "AccessGroup12",
+          "accesses": [
+            {
+              "id": 0,
+              "name": "Access3"
+            },
+            {
+              "id": 9,
+              "name": "Access6"
+            },
+            {
+              "id": 4,
+              "name": "Access12"
+            },
+            {
+              "id": 5,
+              "name": "Access6"
+            },
+            {
+              "id": 12,
+              "name": "Access10"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "AccessGroup8",
+          "accesses": [
+            {
+              "id": 6,
+              "name": "Access8"
+            },
+            {
+              "id": 6,
+              "name": "Access8"
+            },
+            {
+              "id": 6,
+              "name": "Access4"
+            },
+            {
+              "id": 10,
+              "name": "Access12"
+            },
+            {
+              "id": 11,
+              "name": "Access6"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "AccessGroup11",
+          "accesses": [
+            {
+              "id": 8,
+              "name": "Access8"
+            },
+            {
+              "id": 8,
+              "name": "Access3"
+            },
+            {
+              "id": 4,
+              "name": "Access10"
+            },
+            {
+              "id": 12,
+              "name": "Access4"
+            },
+            {
+              "id": 13,
+              "name": "Access4"
+            }
+          ]
+        }
+      ],
+      "accesses": [
+        {
+          "id": 1,
+          "name": "Access5"
+        },
+        {
+          "id": 8,
+          "name": "Access10"
+        },
+        {
+          "id": 4,
+          "name": "Access2"
+        },
+        {
+          "id": 12,
+          "name": "Access3"
+        },
+        {
+          "id": 8,
+          "name": "Access14"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Speciality2",
+      "accessGroups": [
+        {
+          "id": 1,
+          "name": "AccessGroup5",
+          "accesses": [
+            {
+              "id": 8,
+              "name": "Access4"
+            },
+            {
+              "id": 4,
+              "name": "Access6"
+            },
+            {
+              "id": 2,
+              "name": "Access9"
+            },
+            {
+              "id": 3,
+              "name": "Access13"
+            },
+            {
+              "id": 6,
+              "name": "Access14"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "AccessGroup5",
+          "accesses": [
+            {
+              "id": 5,
+              "name": "Access4"
+            },
+            {
+              "id": 1,
+              "name": "Access10"
+            },
+            {
+              "id": 3,
+              "name": "Access9"
+            },
+            {
+              "id": 10,
+              "name": "Access13"
+            },
+            {
+              "id": 6,
+              "name": "Access12"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "AccessGroup12",
+          "accesses": [
+            {
+              "id": 9,
+              "name": "Access8"
+            },
+            {
+              "id": 5,
+              "name": "Access10"
+            },
+            {
+              "id": 7,
+              "name": "Access4"
+            },
+            {
+              "id": 9,
+              "name": "Access8"
+            },
+            {
+              "id": 7,
+              "name": "Access4"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "AccessGroup8",
+          "accesses": [
+            {
+              "id": 3,
+              "name": "Access10"
+            },
+            {
+              "id": 8,
+              "name": "Access5"
+            },
+            {
+              "id": 2,
+              "name": "Access2"
+            },
+            {
+              "id": 13,
+              "name": "Access6"
+            },
+            {
+              "id": 13,
+              "name": "Access4"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "AccessGroup10",
+          "accesses": [
+            {
+              "id": 10,
+              "name": "Access10"
+            },
+            {
+              "id": 1,
+              "name": "Access10"
+            },
+            {
+              "id": 11,
+              "name": "Access10"
+            },
+            {
+              "id": 5,
+              "name": "Access3"
+            },
+            {
+              "id": 5,
+              "name": "Access10"
+            }
+          ]
+        }
+      ],
+      "accesses": [
+        {
+          "id": 7,
+          "name": "Access8"
+        },
+        {
+          "id": 4,
+          "name": "Access10"
+        },
+        {
+          "id": 10,
+          "name": "Access2"
+        },
+        {
+          "id": 3,
+          "name": "Access6"
+        },
+        {
+          "id": 7,
+          "name": "Access11"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Speciality11",
+      "accessGroups": [
+        {
+          "id": 5,
+          "name": "AccessGroup8",
+          "accesses": [
+            {
+              "id": 10,
+              "name": "Access6"
+            },
+            {
+              "id": 9,
+              "name": "Access11"
+            },
+            {
+              "id": 8,
+              "name": "Access11"
+            },
+            {
+              "id": 3,
+              "name": "Access5"
+            },
+            {
+              "id": 7,
+              "name": "Access10"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "AccessGroup11",
+          "accesses": [
+            {
+              "id": 6,
+              "name": "Access6"
+            },
+            {
+              "id": 7,
+              "name": "Access7"
+            },
+            {
+              "id": 8,
+              "name": "Access9"
+            },
+            {
+              "id": 3,
+              "name": "Access4"
+            },
+            {
+              "id": 12,
+              "name": "Access4"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "AccessGroup5",
+          "accesses": [
+            {
+              "id": 5,
+              "name": "Access3"
+            },
+            {
+              "id": 9,
+              "name": "Access9"
+            },
+            {
+              "id": 5,
+              "name": "Access3"
+            },
+            {
+              "id": 5,
+              "name": "Access13"
+            },
+            {
+              "id": 8,
+              "name": "Access7"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "AccessGroup13",
+          "accesses": [
+            {
+              "id": 1,
+              "name": "Access9"
+            },
+            {
+              "id": 3,
+              "name": "Access7"
+            },
+            {
+              "id": 12,
+              "name": "Access12"
+            },
+            {
+              "id": 3,
+              "name": "Access7"
+            },
+            {
+              "id": 10,
+              "name": "Access4"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "AccessGroup13",
+          "accesses": [
+            {
+              "id": 2,
+              "name": "Access6"
+            },
+            {
+              "id": 3,
+              "name": "Access6"
+            },
+            {
+              "id": 2,
+              "name": "Access5"
+            },
+            {
+              "id": 7,
+              "name": "Access6"
+            },
+            {
+              "id": 14,
+              "name": "Access14"
+            }
+          ]
+        }
+      ],
+      "accesses": [
+        {
+          "id": 5,
+          "name": "Access8"
+        },
+        {
+          "id": 7,
+          "name": "Access11"
+        },
+        {
+          "id": 8,
+          "name": "Access12"
+        },
+        {
+          "id": 10,
+          "name": "Access5"
+        },
+        {
+          "id": 5,
+          "name": "Access14"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Speciality6",
+      "accessGroups": [
+        {
+          "id": 6,
+          "name": "AccessGroup6",
+          "accesses": [
+            {
+              "id": 0,
+              "name": "Access0"
+            },
+            {
+              "id": 6,
+              "name": "Access1"
+            },
+            {
+              "id": 8,
+              "name": "Access12"
+            },
+            {
+              "id": 12,
+              "name": "Access11"
+            },
+            {
+              "id": 5,
+              "name": "Access12"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "AccessGroup2",
+          "accesses": [
+            {
+              "id": 8,
+              "name": "Access10"
+            },
+            {
+              "id": 10,
+              "name": "Access11"
+            },
+            {
+              "id": 3,
+              "name": "Access11"
+            },
+            {
+              "id": 11,
+              "name": "Access4"
+            },
+            {
+              "id": 13,
+              "name": "Access14"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "AccessGroup11",
+          "accesses": [
+            {
+              "id": 8,
+              "name": "Access2"
+            },
+            {
+              "id": 9,
+              "name": "Access1"
+            },
+            {
+              "id": 3,
+              "name": "Access5"
+            },
+            {
+              "id": 9,
+              "name": "Access5"
+            },
+            {
+              "id": 13,
+              "name": "Access13"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "AccessGroup4",
+          "accesses": [
+            {
+              "id": 1,
+              "name": "Access10"
+            },
+            {
+              "id": 11,
+              "name": "Access9"
+            },
+            {
+              "id": 3,
+              "name": "Access3"
+            },
+            {
+              "id": 11,
+              "name": "Access11"
+            },
+            {
+              "id": 11,
+              "name": "Access11"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "AccessGroup5",
+          "accesses": [
+            {
+              "id": 4,
+              "name": "Access1"
+            },
+            {
+              "id": 7,
+              "name": "Access9"
+            },
+            {
+              "id": 3,
+              "name": "Access8"
+            },
+            {
+              "id": 10,
+              "name": "Access5"
+            },
+            {
+              "id": 12,
+              "name": "Access5"
+            }
+          ]
+        }
+      ],
+      "accesses": [
+        {
+          "id": 9,
+          "name": "Access8"
+        },
+        {
+          "id": 3,
+          "name": "Access5"
+        },
+        {
+          "id": 7,
+          "name": "Access7"
+        },
+        {
+          "id": 5,
+          "name": "Access8"
+        },
+        {
+          "id": 4,
+          "name": "Access14"
+        }
+      ]
+    }
+  ]

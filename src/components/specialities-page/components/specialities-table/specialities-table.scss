@@ -1,0 +1,12 @@
+.text-truncate {
+    max-width: 20vw;
+}
+
+.expandable-content {
+    overflow: hidden;
+
+    .list {
+        max-height: 250px;
+        overflow-y: auto;
+    }
+}
