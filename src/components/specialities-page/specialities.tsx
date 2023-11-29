@@ -34,7 +34,7 @@ export default function SpecialitiesPage() {
   return (
     <>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 mt-5">
           <SpecialitiesTable data={data} click={onEdit}/>
         </div>
       </div>

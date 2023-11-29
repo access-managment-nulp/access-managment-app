@@ -63,15 +63,15 @@ export default function AccessesPage() {
     return (
         <>
             <div className="row">
-                <div className="col-12">
+                <div className="col-12 mt-4">
                     <div className="expandable-content row d-flex justify-content-around m-4">
-                        <div className="col-auto list-container flex-grow-1 ">
+                        <div className="col-auto list-container flex-grow-1">
                         <h4 className="text-center">Access Groups</h4>
                         <div className="list-wrapper">
                             <List className="list" items={accessGroups} footer={renderAddNew(() => {setDialogItem(undefined); setShowEdit(true);})}>
                                 <List.Item
                                     className='cursor-poiner'
-                                    onClick={(ev, item) => {ev.stopPropagation(); setDisplayedAccesses(item.accesses);}}
+                                    onClick={(ev, item) => {ev.stopPropagation(); ev.currentTarget.classList.add("secondary"); setDisplayedAccesses(item.accesses);}}
                                     renderItem={renderAccessGroupItem}
                                 />
                             </List>
