@@ -1,0 +1,47 @@
+.tile-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust the margin-top value as needed */
+  }
+
+.tile-container {
+    margin: 20px;
+    width: 320px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.tile-container:hover{
+    transform: scale(1.05); 
+}
+
+.tile-link {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.tile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tile-image {
+    width: 50%; /* Adjust the width as needed */
+    height: auto;
+    max-height: 150px; /* Set a max-height to control the image size */
+    margin-bottom: 10px; /* Add some bottom margin for spacing */
+  }
+  
+  .tile-title {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }

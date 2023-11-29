@@ -38,7 +38,7 @@ const LoginForm = () => {
             />
           </Form.Group>
           <div className="d-grid gap-2 mt-3">
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" href='/welcomepage'>
               Submit
             </Button>
           </div>
