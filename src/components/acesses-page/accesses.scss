@@ -1,7 +1,8 @@
 
 .list-wrapper {
-    display: block;
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    max-height: 50vh;
 }
 
 .cursor-poiner {
@@ -12,3 +13,8 @@
     background: #e9ecef;
 }
 
+
+.toast {
+    position: static;
+    bottom: 0;
+}

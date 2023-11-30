@@ -9,19 +9,19 @@ type CreateUpdateDialogProps<TData> = {
     show: boolean;
     onHide: () => void;
     item?: TData
-    acesses: Array<Access>
+    accesses: Array<Access>
     onSubmit?: (item: TData) => void;
 }
 
 export default function CreateUpdateDialog(props: CreateUpdateDialogProps<AccessGroup>) {
-    const {show,item,onHide,onSubmit, acesses} = props;
+    const {show,item,onHide,onSubmit, accesses: acesses} = props;
 
     const {register, handleSubmit, control, formState: {errors}, reset} = useForm<AccessGroup>();
 
     useEffect(() => {
         
         reset(item ?? {
-            id:-100,
+            id: undefined,
             name: '',
             accesses: []
         });
