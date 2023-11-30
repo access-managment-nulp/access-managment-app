@@ -70,19 +70,20 @@ class SpecialitiesTableRow extends React.Component<
         {this.state.expanded && (
           <tr className="expandable-container">
             <td colSpan={4}>
-              <div className="expandable-content row d-flex justify-content-around m-4">
-                <div className="col-auto list-container flex-grow-1 ">
+              <div className="flex-nowrap expandable-content row d-flex justify-content-around m-4">
+                <div className="col-6 list-container flex-grow-1 ">
                   <h4 className="text-center">Access Groups</h4>
                   <div className="list-wrapper">
                     <List className="list" items={data.accessGroups}>
                       <List.Item
                         keySelector={(e) => e.name + e.id}
                         renderItem={this.renderAccessGroupItem}
+                        style={{ overflowWrap: 'anywhere' }}
                       />
                     </List>
                   </div>
                 </div>
-                <div className="col-auto list-container flex-grow-1 ">
+                <div className="col-6 list-container flex-grow-1 ">
                   <h4 className="text-center">Accesses</h4>
                   <div className="list-wrapper">
                     <List className="list" items={data.accesses}>

@@ -35,8 +35,8 @@ export default function AccessesPage() {
     const renderAccessGroupItem = (accessGroup: AccessGroup) => {
         return (
             <div className="item d-flex flex-nowrap">
-                <span className="flex-grow-1 align-self-center">{accessGroup.name}</span>
-                <div className="actions d-flex gap-2">
+                <span className="flex-grow-1 align-self-center" style={{ overflowWrap: 'anywhere' }}>{accessGroup.name}</span>
+                <div className="actions d-flex gap-2 align-self-center" style={{ height: 'min-content'}}>
                     <button className='btn btn-warning' onClick={() => {setDialogItem(accessGroup); setShowEdit(true);}}>Edit</button>
                     <button className='btn btn-danger' onClick={() => {setDialogItem(accessGroup); setShowDelete(true);}}>Delete</button>
                 </div>
@@ -65,7 +65,7 @@ export default function AccessesPage() {
             <div className="row">
                 <div className="col-12 mt-4">
                     <div className="expandable-content row d-flex justify-content-around m-4">
-                        <div className="col-auto list-container flex-grow-1">
+                        <div className="col-6 list-container flex-grow-1">
                         <h4 className="text-center">Access Groups</h4>
                         <div className="list-wrapper">
                             <List className="list" items={accessGroups} footer={renderAddNew(() => {setDialogItem(undefined); setShowEdit(true);})}>
@@ -77,7 +77,7 @@ export default function AccessesPage() {
                             </List>
                         </div>
                         </div>
-                        <div className="col-auto list-container flex-grow-1 ">
+                        <div className="col-6 list-container flex-grow-1 ">
                         <h4 className="text-center">Accesses</h4>
                         <div className="list-wrapper">
                             <List className="list" items={displayedAccesses}>
