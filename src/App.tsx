@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
 import NavBar from './components/shared/navbar/navbar';
 import SpecialitiesPage from './components/specialities-page/specialities';
 import AccessesPage from './components/acesses-page/accesses';
@@ -13,6 +13,16 @@ import MainModuleRedirectPage from './components/welcome-page/main-module-redire
 function App() {
 
 const[isLoggedIn, setIsLoggedIn] = React.useState<boolean>(false);
+
+{/* <BrowserRouter>
+<Routes>
+  <Route path = '/redirectmodule' element = {<MainModuleRedirectPage/>}/>
+  <Route path = '/welcomepage' element = {<WelcomePage/>}/>
+  <Route path = '/' element = {<LoginPage setIsLoggedIn={setIsLoggedIn}/>}/>
+  <Route path = '/specialities' element = {<SpecialitiesPage/>}/>
+  <Route path = '/accesses' element = {<AccessesPage/>}/>
+</Routes>
+</BrowserRouter> */}
 
 const router = createBrowserRouter([
   {
