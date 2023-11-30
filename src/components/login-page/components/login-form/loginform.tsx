@@ -16,21 +16,19 @@ const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
   const [password, setPassword] = useState('');
 
   // Function to handle form submission
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>)  {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Add your authentication logic here
     console.log('Username:', username);
     console.log('Password:', password);
     // You can add your authentication logic here
     setIsLoggedIn(true);
-
-    sessionStorage.setItem('isAutorized', 'true');
     navigate('/welcomepage');
   };
 
   return (
     <div className="Auth-form-container">
-      <Form className="Auth-form" onSubmit={(e) => handleSubmit(e)}>
+      <Form className="Auth-form" onSubmit={handleSubmit}>
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
           <Form.Group className="mb-3" controlId="formEmail">

@@ -9,7 +9,7 @@ interface NavBarProps {
 const NavBar = ({ setIsLoggedIn, isLoggedIn }: NavBarProps) => {
   return (
     <nav className="navbar navbar-expand navbar-light px-3">
-      <div className="nav navbar-nav flex-nowrap">
+      <div className="nav navbar-nav flex-nowrap w-100 ">
         <a
           className="nav-item navbar-brand color-white"
           href="/welcomepage"
@@ -30,19 +30,19 @@ const NavBar = ({ setIsLoggedIn, isLoggedIn }: NavBarProps) => {
             <NavLink disabled className="color-white">Not implemented</NavLink>
             <NavLink disabled className="color-white">Not implemented</NavLink>
             <NavLink disabled className="color-white">Not implemented</NavLink>
+            <div className="ms-auto d-flex  flex-grow-1 justify-content-end ">
+              <button className="btn btn-danger btn-hover-red">
+                <a
+                  className="logoutBtn"
+                  href="/"
+                  onClick={() => setIsLoggedIn(false)}
+                >
+                  Log Out
+                </a>
+              </button>
+            </div>
           </>
         )}
-      </div>
-      <div className="ms-auto">
-        <button className="btn btn-danger btn-hover-red">
-          <a
-            className="logoutBtn"
-            href="/"
-            onClick={() => setIsLoggedIn(false)}
-          >
-            Log Out
-          </a>
-        </button>
       </div>
     </nav>
   );

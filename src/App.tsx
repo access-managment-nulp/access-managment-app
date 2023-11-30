@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.scss';
-import { Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/shared/navbar/navbar';
 import SpecialitiesPage from './components/specialities-page/specialities';
 import AccessesPage from './components/acesses-page/accesses';
@@ -12,6 +12,10 @@ import MainModuleRedirectPage from './components/welcome-page/main-module-redire
 
 function App() {
   const[isLoggedIn, setIsLoggedIn] = React.useState<boolean>(sessionStorage.getItem('isAutorized') === 'true');
+
+  useEffect(() => {
+    sessionStorage.setItem('isAutorized', isLoggedIn.toString());
+  }, [isLoggedIn])
 
   return (
     <>
