@@ -3,11 +3,17 @@ import LoginForm from "./components/login-form/loginform";
 import { useForm, Controller } from "react-hook-form";
 import { Form } from "react-bootstrap";
 
-export default function LoginPage() {
+interface Props {    
+    setIsLoggedIn: (isLoggedIn: boolean) => void;
+}
+
+const LoginPage = ({setIsLoggedIn} : Props) => {
 
     return(
         <div className = "container">
-            <LoginForm></LoginForm>
+            <LoginForm setIsLoggedIn={setIsLoggedIn}></LoginForm>
         </div>
     );
 }
+
+export default LoginPage;

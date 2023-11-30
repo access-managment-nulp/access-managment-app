@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import NavBar from './components/shared/navbar/navbar';
@@ -7,6 +7,12 @@ import AccessesPage from './components/acesses-page/accesses';
 import LoginPage from './components/login-page/loginpage';
 import WelcomePage from './components/welcome-page/welcome-page';
 import MainModuleRedirectPage from './components/welcome-page/main-module-redirect-page/main-module-redirect-page';
+
+
+
+function App() {
+
+const[isLoggedIn, setIsLoggedIn] = React.useState<boolean>(false);
 
 const router = createBrowserRouter([
   {
@@ -19,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <LoginPage/>
+    element: <LoginPage setIsLoggedIn={setIsLoggedIn}/>
   },
   {
     path: '/specialities',
@@ -31,10 +37,9 @@ const router = createBrowserRouter([
   },
 ])
 
-function App() {
   return (
     <>
-      <NavBar />
+      <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
       <div className="container position-relative">
         <RouterProvider router={router}/>
       </div>

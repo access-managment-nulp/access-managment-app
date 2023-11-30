@@ -2,25 +2,30 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './loginform.scss'; 
 
+interface LoginFormProps {
+  setIsLoggedIn: (isLoggedIn : boolean) => void;
+} 
 
 // Create a functional component for the login page
-const LoginForm = () => {
+const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
   // Define state for the username and password
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   // Function to handle form submission
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>)  {
     event.preventDefault();
     // Add your authentication logic here
     console.log('Username:', username);
     console.log('Password:', password);
     // You can add your authentication logic here
+    setIsLoggedIn(true);
+    console.log('asdasd');
   };
 
   return (
     <div className="Auth-form-container">
-      <Form className="Auth-form" onSubmit={handleSubmit}>
+      <Form className="Auth-form" onSubmit={(e) => handleSubmit(e)}>
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
           <Form.Group className="mb-3" controlId="formEmail">
