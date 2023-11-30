@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
 import NavBar from './components/shared/navbar/navbar';
 import SpecialitiesPage from './components/specialities-page/specialities';
 import AccessesPage from './components/acesses-page/accesses';
@@ -11,37 +11,19 @@ import MainModuleRedirectPage from './components/welcome-page/main-module-redire
 
 
 function App() {
-
-const[isLoggedIn, setIsLoggedIn] = React.useState<boolean>(false);
-
-const router = createBrowserRouter([
-  {
-    path: '/redirectmodule',
-    element: <MainModuleRedirectPage/>
-  },
-  {
-    path: '/welcomepage',
-    element: <WelcomePage/>
-  },
-  {
-    path: '/',
-    element: <LoginPage setIsLoggedIn={setIsLoggedIn}/>
-  },
-  {
-    path: '/specialities',
-    element: <SpecialitiesPage />
-  },
-  {
-    path: '/accesses',
-    element: <AccessesPage />
-  },
-])
+  const[isLoggedIn, setIsLoggedIn] = React.useState<boolean>(sessionStorage.getItem('isAutorized') === 'true');
 
   return (
     <>
       <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
       <div className="container position-relative">
-        <RouterProvider router={router}/>
+        <Routes>
+          <Route path='/welcomepage' element={<WelcomePage/>}/>
+          <Route path='/redirectmodule' element={<MainModuleRedirectPage />}/>
+          <Route path='/specialities' element={<SpecialitiesPage/>}/>
+          <Route path='/accesses' element={<AccessesPage/>}/>
+          <Route path='/' element={<LoginPage setIsLoggedIn={setIsLoggedIn}/>}/>
+        </Routes>
       </div>
     </>
   );

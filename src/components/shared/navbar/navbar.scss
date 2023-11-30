@@ -3,8 +3,16 @@
     box-shadow: 2px 2px 12px 1px rgba(0, 69, 142, 0.24);
 }
 
-.nav-item {
-    color: #ffffff;
+
+.nav-link, .nav-item {
+    color: lightgrey !important;
+    &:not(.disabled) {
+        color: #ffffff !important;
+        transition: 0.1s color;
+        &:hover {
+            color: #111213 !important;
+        }
+    }
 }
 
 .btn-hover-red:hover {

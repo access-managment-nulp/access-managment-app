@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './loginform.scss'; 
+import { useNavigate } from 'react-router-dom';
 
 interface LoginFormProps {
   setIsLoggedIn: (isLoggedIn : boolean) => void;
@@ -8,6 +9,8 @@ interface LoginFormProps {
 
 // Create a functional component for the login page
 const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
+  const navigate = useNavigate();
+
   // Define state for the username and password
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -20,7 +23,9 @@ const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
     console.log('Password:', password);
     // You can add your authentication logic here
     setIsLoggedIn(true);
-    console.log('asdasd');
+
+    sessionStorage.setItem('isAutorized', 'true');
+    navigate('/welcomepage');
   };
 
   return (
@@ -43,7 +48,7 @@ const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
             />
           </Form.Group>
           <div className="d-grid gap-2 mt-3">
-            <Button variant="primary" type="submit" href='/welcomepage'>
+            <Button variant="primary" type="submit">
               Submit
             </Button>
           </div>
