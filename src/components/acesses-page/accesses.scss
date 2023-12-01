@@ -15,6 +15,12 @@
 
 
 .toast {
-    position: static;
-    bottom: 0;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.field[aria-invalid = true] {
+    border-color: red;   
 }

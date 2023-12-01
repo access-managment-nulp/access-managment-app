@@ -12,7 +12,7 @@ const NavBar = ({ setIsLoggedIn, isLoggedIn }: NavBarProps) => {
       <div className="nav navbar-nav flex-nowrap w-100 ">
         <a
           className="nav-item navbar-brand color-white"
-          href="/welcomepage"
+          href={isLoggedIn ? "/welcomepage" : "/"}
           aria-current="page"
         >
           Access Managment

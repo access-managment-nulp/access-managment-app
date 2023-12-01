@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
-import { Route, Routes } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 import NavBar from './components/shared/navbar/navbar';
 import SpecialitiesPage from './components/specialities-page/specialities';
 import AccessesPage from './components/acesses-page/accesses';
@@ -11,7 +11,7 @@ import MainModuleRedirectPage from './components/welcome-page/main-module-redire
 
 
 function App() {
-  const[isLoggedIn, setIsLoggedIn] = React.useState<boolean>(sessionStorage.getItem('isAutorized') === 'true');
+  const [isLoggedIn, setIsLoggedIn] = React.useState<boolean>(sessionStorage.getItem('isAutorized') === 'true');
 
   useEffect(() => {
     sessionStorage.setItem('isAutorized', isLoggedIn.toString());
@@ -19,14 +19,18 @@ function App() {
 
   return (
     <>
-      <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+      <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <div className="container position-relative">
         <Routes>
-          <Route path='/welcomepage' element={<WelcomePage/>}/>
-          <Route path='/redirectmodule' element={<MainModuleRedirectPage />}/>
-          <Route path='/specialities' element={<SpecialitiesPage/>}/>
-          <Route path='/accesses' element={<AccessesPage/>}/>
-          <Route path='/' element={<LoginPage setIsLoggedIn={setIsLoggedIn}/>}/>
+            {isLoggedIn &&
+              <>
+                <Route path='/welcomepage' element={<WelcomePage />} />
+                <Route path='/redirectmodule' element={<MainModuleRedirectPage />} />
+                <Route path='/specialities' element={<SpecialitiesPage />} />
+                <Route path='/accesses' element={<AccessesPage />} />
+              </>
+            }
+            <Route path='/' element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
         </Routes>
       </div>
     </>

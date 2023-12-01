@@ -44,7 +44,7 @@ export default function AccessesPage() {
     return () => {
       document.removeEventListener("click", displayAll);
     };
-  }, []);
+  }, [accesses]);
 
   function handleSubmit(item: AccessGroup) {
     console.log("edit/create", item);
@@ -159,7 +159,6 @@ export default function AccessesPage() {
                     className="cursor-poiner"
                     onClick={(ev, item) => {
                       ev.stopPropagation();
-                      ev.currentTarget.classList.add("secondary");
                       setDisplayedAccesses(item.accesses);
                     }}
                     renderItem={renderAccessGroupItem}
@@ -189,6 +188,7 @@ export default function AccessesPage() {
         show={showEdit}
         item={dialogItem}
         accesses={accesses}
+        accessGroups={accessGroups}
         onSubmit={handleSubmit}
         onHide={() => setShowEdit(false)}
       />
