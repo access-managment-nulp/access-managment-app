@@ -15,3 +15,8 @@ export interface AccessGroup {
     name: string;
     accesses: Array<Access>;
 }
+
+export interface AuthUser{
+    email: string;
+    token: string;
+}

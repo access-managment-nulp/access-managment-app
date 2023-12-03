@@ -35,7 +35,10 @@ const NavBar = ({ setIsLoggedIn, isLoggedIn }: NavBarProps) => {
                 <a
                   className="logoutBtn"
                   href="/"
-                  onClick={() => setIsLoggedIn(false)}
+                  onClick={() => {
+                    setIsLoggedIn(false)
+                    localStorage.removeItem('accessManagmentAppToken')
+                  }}
                 >
                   Log Out
                 </a>

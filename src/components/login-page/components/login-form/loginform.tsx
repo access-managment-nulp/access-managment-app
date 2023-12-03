@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './loginform.scss'; 
 import { useNavigate } from 'react-router-dom';
+import {login} from "../../../../services/auth.service";
 
 interface LoginFormProps {
   setIsLoggedIn: (isLoggedIn : boolean) => void;
@@ -21,8 +22,15 @@ const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
     // Add your authentication logic here
     console.log('Username:', username);
     console.log('Password:', password);
-    // You can add your authentication logic here
-    setIsLoggedIn(true);
+    login(username, password)
+        .then(res => {
+          localStorage.setItem("accessManagmentAppToken", res.data.token);
+          setIsLoggedIn(true);
+        }).catch(error => {
+          console.log("Auth Fail");
+          setIsLoggedIn(false);
+    })
+
     navigate('/welcomepage');
   };
 
@@ -36,6 +44,8 @@ const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
             <Form.Control
               type="email"
               placeholder="Enter email"
+              value={username}
+              onChange={value => setUsername(value.target.value)}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPassword">
@@ -43,6 +53,8 @@ const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
             <Form.Control
               type="password"
               placeholder="Enter password"
+              value ={password}
+              onChange={value => setPassword(value.target.value)}
             />
           </Form.Group>
           <div className="d-grid gap-2 mt-3">
