@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
-import {Route, Routes } from 'react-router-dom';
+import {Route, Routes, useNavigate} from 'react-router-dom';
 import NavBar from './components/shared/navbar/navbar';
 import SpecialitiesPage from './components/specialities-page/specialities';
 import AccessesPage from './components/acesses-page/accesses';
@@ -11,11 +11,13 @@ import MainModuleRedirectPage from './components/welcome-page/main-module-redire
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState<boolean>(sessionStorage.getItem('isAutorized') === 'true');
+  const [isLoggedIn, setIsLoggedIn] = React.useState<boolean>(false);
 
+  const navigate = useNavigate();
   useEffect(() => {
-    sessionStorage.setItem('isAutorized', isLoggedIn.toString());
-  }, [isLoggedIn])
+      const isLoggedIn = localStorage.getItem('accessManagmentAppToken') !== null
+      setIsLoggedIn(isLoggedIn);
+  }, [])
 
   return (
     <>
@@ -24,7 +26,7 @@ function App() {
         <Routes>
             {isLoggedIn &&
               <>
-                <Route path='/welcomepage' element={<WelcomePage />} />
+                <Route path='/welcomepage' element={<WelcomePage />}  />
                 <Route path='/redirectmodule' element={<MainModuleRedirectPage />} />
                 <Route path='/specialities' element={<SpecialitiesPage />} />
                 <Route path='/accesses' element={<AccessesPage />} />

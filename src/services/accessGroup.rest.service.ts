@@ -2,22 +2,21 @@ import { AccessGroup } from "../models/speciality.model";
 import { BaseRestService } from "./base.rest.service";
 
 class AccessGroupService extends BaseRestService {
-    protected baseApiUrl: string = this.baseApiUrl + '/accessGroups';
 
     getAll() {
-        return this.get<Array<AccessGroup>>('/all');
+        return this.get<Array<AccessGroup>>('/accessGroups/all');
     }
 
     create(accessGroup: AccessGroup) {
-        return this.post('/create', accessGroup);
+        return this.post('/accessGroups/create', accessGroup);
     }
     
     update(accessGroup: AccessGroup) {
-        return this.put('/update', accessGroup);
+        return this.put('/accessGroups/update', accessGroup);
     }
 
     deleteItem(id: number) {
-        return this.delete(`/${id}`);
+        return this.delete(`/accessGroups/${id}`);
     }
 }
 
