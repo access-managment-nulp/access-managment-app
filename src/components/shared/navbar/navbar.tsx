@@ -15,15 +15,15 @@ const NavBar = ({ setIsLoggedIn, isLoggedIn }: NavBarProps) => {
           href={isLoggedIn ? "/welcomepage" : "/"}
           aria-current="page"
         >
-          Access Managment
+          Access Management
         </a>
         {isLoggedIn && (
           <>
             <NavDropdown
-              title="Access managment"
+              title="Access management"
               className="color-white"
             >
-              <NavDropdown.Item href="/specialities">Specialties</NavDropdown.Item>
+              <NavDropdown.Item href="/specialities">Specialities</NavDropdown.Item>
               <NavDropdown.Item href="/accesses">Accesses</NavDropdown.Item>
             </NavDropdown>
             <NavLink disabled className="color-white">Not implemented</NavLink>
