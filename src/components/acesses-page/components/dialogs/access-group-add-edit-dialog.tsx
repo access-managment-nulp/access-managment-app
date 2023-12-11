@@ -35,7 +35,7 @@ export default function CreateUpdateDialog(props: CreateUpdateDialogProps<Access
         <>
           <Form.Group className="mb-3">
             <Form.Label>Access Group</Form.Label>
-            <Form.Control type="text" className="field" aria-invalid={errors.name ? "true" : "false"} {...register('name', {required: true, minLength: 3, validate: {exists: (value) => !accessGroups.some(e => e.name === value) || item !== undefined}})}/>
+            <Form.Control type="text" className="field" aria-invalid={errors.name ? "true" : "false"} {...register('name', {required: true, minLength: 3, validate: {exists: (value) => !accessGroups.filter(e => e.id !== item?.id).some(e => e.name === value)}})}/>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>Accesses</Form.Label>
