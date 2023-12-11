@@ -196,13 +196,7 @@ export default function AccessesPage() {
         onHide={() => setShowEdit(false)}
       />
 
-      <InfoToast
-        className="toast"
-        show={showToast}
-        onClose={handleToastClose}
-        icon={SuccessIcon}
-        text={<strong className="h4 m-0">Success</strong>}
-      />
+     
     </>
   );
 }
