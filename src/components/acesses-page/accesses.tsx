@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import AccessGroupDeleteDialog from "./components/dialogs/access-group-delete-dialog";
 import CreateUpdateDialog from "./components/dialogs/access-group-add-edit-dialog";
 import InfoToast from "../shared/toasts/toast";
-import { ToastContainer } from "react-bootstrap";
 import accessRestService from "../../services/access.rest.service";
 import accessGroupRestService from "../../services/accessGroup.rest.service";
+import {toast} from "react-toastify";
 
 export default function AccessesPage() {
   const [accesses, setAccesses] = useState<Array<Access>>([]);
@@ -17,7 +17,7 @@ export default function AccessesPage() {
         accessRestService.getAll().then(e => {
             setAccesses(e.data);
             setDisplayedAccesses(e.data);
-        })
+        }).catch(error => toast.error('Fail load accesses'))
 
         loadAccessGroups();
     }, [])
@@ -25,7 +25,7 @@ export default function AccessesPage() {
     function loadAccessGroups() {
         accessGroupRestService.getAll().then(e => {
             setAccessGroups(e.data);
-        })
+        }).catch(error => toast.error('Fail load Access Group'))
     }
 
   const [displayedAccesses, setDisplayedAccesses] =
@@ -51,12 +51,14 @@ export default function AccessesPage() {
 
     if(item.id) {
         accessGroupRestService.update(item).then(e => {
+            toast.success('Access group was successfully updated');
             loadAccessGroups();
-        });
+        }).catch(error => toast.error('Fail update access group'));
     } else {
         accessGroupRestService.create(item).then(e => {
+            toast.success('Access group was successfully created');
             loadAccessGroups();
-        });
+        }).catch(error => toast.error('Fail create access group'));
     }
 
     setShowEdit(false);
@@ -72,8 +74,9 @@ export default function AccessesPage() {
 
     if(dialogItem?.id) {
         accessGroupRestService.deleteItem(dialogItem.id).then(e => {
+            toast.success('Access group was successfully deleted');
             loadAccessGroups();
-        })
+        }).catch(error => toast.error('Fail delete access group'))
     }
 
     setShowDelete(false);

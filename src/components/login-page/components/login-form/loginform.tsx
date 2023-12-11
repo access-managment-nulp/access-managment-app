@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import './loginform.scss'; 
 import { useNavigate } from 'react-router-dom';
 import {login} from "../../../../services/auth.service";
+import {toast} from "react-toastify";
 
 interface LoginFormProps {
   setIsLoggedIn: (isLoggedIn : boolean) => void;
@@ -26,12 +27,14 @@ const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
         .then(res => {
           localStorage.setItem("accessManagmentAppToken", res.data.token);
           setIsLoggedIn(true);
+          navigate('/welcomepage');
         }).catch(error => {
           console.log("Auth Fail");
+          toast.error("Wrong email and password")
           setIsLoggedIn(false);
     })
 
-    navigate('/welcomepage');
+
   };
 
   return (
@@ -62,9 +65,6 @@ const LoginForm = ({setIsLoggedIn} : LoginFormProps) => {
               Submit
             </Button>
           </div>
-          <p className="forgot-password text-right mt-2">
-            Forgot <a href="#">password?</a>
-          </p>
         </div>
       </Form>
     </div>

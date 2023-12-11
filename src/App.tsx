@@ -7,8 +7,8 @@ import AccessesPage from './components/acesses-page/accesses';
 import LoginPage from './components/login-page/loginpage';
 import WelcomePage from './components/welcome-page/welcome-page';
 import MainModuleRedirectPage from './components/welcome-page/main-module-redirect-page/main-module-redirect-page';
-
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState<boolean>(false);
@@ -33,8 +33,10 @@ function App() {
               </>
             }
             <Route path='/' element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
+            <Route path='*' element={<h1>Page not found or you do not have access</h1>}/>
         </Routes>
       </div>
+
     </>
   );
 }

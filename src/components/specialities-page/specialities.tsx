@@ -6,6 +6,7 @@ import { useForm, Controller } from "react-hook-form";
 import { Form } from "react-bootstrap";
 import ReactSelect from "react-select";
 import specialityRestService from "../../services/speciality.rest.service";
+import {toast} from "react-toastify";
 
 
 export default function SpecialitiesPage() {
@@ -22,7 +23,7 @@ export default function SpecialitiesPage() {
   }, [])
 
   function updateItems() {
-    specialityRestService.getAll().then(e => setItems(e.data));
+    specialityRestService.getAll().then(e => setItems(e.data)).catch(errors => toast('fail load speciality'));
   }
 
   const onEdit = (data: Speciality) => {
@@ -42,9 +43,10 @@ export default function SpecialitiesPage() {
 
     specialityRestService.update(e).then(e => {
       if(e.status === 200) {
+        toast.success('Speciality was successfully updated')
         updateItems();
       }
-    });
+    }).catch(error => toast.error('Fail update speciality'));
     
   }
 
