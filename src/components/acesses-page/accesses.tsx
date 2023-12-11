@@ -25,7 +25,7 @@ export default function AccessesPage() {
     function loadAccessGroups() {
         accessGroupRestService.getAll().then(e => {
             setAccessGroups(e.data);
-        }).catch(error => toast.error('Fail load Access Group'))
+        })
     }
 
   const [displayedAccesses, setDisplayedAccesses] =
@@ -51,14 +51,12 @@ export default function AccessesPage() {
 
     if(item.id) {
         accessGroupRestService.update(item).then(e => {
-            toast.success('Access group was successfully updated');
             loadAccessGroups();
-        }).catch(error => toast.error('Fail update access group'));
+        });
     } else {
         accessGroupRestService.create(item).then(e => {
-            toast.success('Access group was successfully created');
             loadAccessGroups();
-        }).catch(error => toast.error('Fail create access group'));
+        });
     }
 
     setShowEdit(false);
@@ -74,9 +72,8 @@ export default function AccessesPage() {
 
     if(dialogItem?.id) {
         accessGroupRestService.deleteItem(dialogItem.id).then(e => {
-            toast.success('Access group was successfully deleted');
             loadAccessGroups();
-        }).catch(error => toast.error('Fail delete access group'))
+        })
     }
 
     setShowDelete(false);
