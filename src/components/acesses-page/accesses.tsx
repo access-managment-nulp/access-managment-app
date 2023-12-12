@@ -12,6 +12,8 @@ import {toast} from "react-toastify";
 export default function AccessesPage() {
   const [accesses, setAccesses] = useState<Array<Access>>([]);
   const [accessGroups, setAccessGroups] = useState<Array<AccessGroup>>([]);
+  const [selectedItem, setSelectedItem] = useState<AccessGroup>();
+  const [selected, setSelected] = useState<boolean>();
 
     useEffect(() => {
         accessRestService.getAll().then(e => {
@@ -89,8 +91,8 @@ export default function AccessesPage() {
 
   const renderAccessGroupItem = (accessGroup: AccessGroup) => {
     return (
-      <div className="item d-flex flex-nowrap">
-        <span className="flex-grow-1 align-self-center" style={{ overflowWrap: 'anywhere' }}>
+      <div className="item d-flex flex-nowrap" style={{cursor: "pointer"}}>
+        <span className="flex-grow-1 align-self-center" style={{ overflowWrap: 'anywhere', color: accessGroup.id === selectedItem?.id ? "#3333e3" : "#333333"}}>
           {accessGroup.name}
         </span>
         <div className="actions d-flex flex-nowrap gap-2 align-self-center">
@@ -159,10 +161,11 @@ export default function AccessesPage() {
                   footer={renderAddNew(addNew)}
                 >
                   <List.Item
-                    className="cursor-poiner"
+                    className="cursor-pointer"
                     onClick={(ev, item) => {
                       ev.stopPropagation();
                       setDisplayedAccesses(item.accesses);
+                      setSelectedItem(item);
                     }}
                     renderItem={renderAccessGroupItem}
                   />
