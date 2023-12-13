@@ -4,12 +4,12 @@ import './welcome-page.scss';
 export default function WelcomePage() {
     
     const tileButtonData = [
-        { imageUrl: './images/admin.png', linkTo: '/redirectmodule', title: 'Access Management' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Patient Cabinet' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Doctor Cabinet' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Communication' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Questionnaires' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Analysis' },
+        { imageUrl: './images/access-control.png', linkTo: '/redirectmodule', title: 'Access Management' },
+        { imageUrl: './images/healthy.png', linkTo: '/welcomepage', title: 'Patient Cabinet' },
+        { imageUrl: './images/nutritionist.png', linkTo: '/welcomepage', title: 'Doctor Cabinet' },
+        { imageUrl: './images/advice.png', linkTo: '/welcomepage', title: 'Communication' },
+        { imageUrl: './images/questions.png', linkTo: '/welcomepage', title: 'Questionnaires' },
+        { imageUrl: './images/diagnosis.png', linkTo: '/welcomepage', title: 'Analysis' },
       ];
 
     return(
