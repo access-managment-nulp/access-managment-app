@@ -5,11 +5,11 @@ export default function WelcomePage() {
     
     const tileButtonData = [
         { imageUrl: './images/admin.png', linkTo: '/redirectmodule', title: 'Access Management' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'NotImplemented' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'NotImplemented' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'NotImplemented' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'NotImplemented' },
-        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'NotImplemented' },
+        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Patient Cabinet' },
+        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Doctor Cabinet' },
+        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Communication' },
+        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Questionnaires' },
+        { imageUrl: './images/admin.png', linkTo: '/welcomepage', title: 'Analysis' },
       ];
 
     return(

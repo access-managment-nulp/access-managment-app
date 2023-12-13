@@ -21,19 +21,18 @@ function App() {
 
   return (
     <>
+      <img src="./images/medical.jpg" className="bgimgwelcome"></img>
       <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <div className="container position-relative">
         <Routes>
-            {isLoggedIn &&
               <>
                 <Route path='/welcomepage' element={<WelcomePage />}  />
                 <Route path='/redirectmodule' element={<MainModuleRedirectPage />} />
                 <Route path='/specialities' element={<SpecialitiesPage />} />
                 <Route path='/accesses' element={<AccessesPage />} />
               </>
-            }
             <Route path='/' element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
-            <Route path='*' element={<h1>Page not found or you do not have access</h1>}/>
+            <Route path='*' element={<h1 className="center">Page not found or you do not have access</h1>}/>
         </Routes>
       </div>
 

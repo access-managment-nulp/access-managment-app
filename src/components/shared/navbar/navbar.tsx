@@ -15,7 +15,7 @@ const NavBar = ({ setIsLoggedIn, isLoggedIn }: NavBarProps) => {
           href={isLoggedIn ? "/welcomepage" : "/"}
           aria-current="page"
         >
-          Access Management
+          Quality Of Life
         </a>
         {isLoggedIn && (
           <>
@@ -26,10 +26,11 @@ const NavBar = ({ setIsLoggedIn, isLoggedIn }: NavBarProps) => {
               <NavDropdown.Item href="/specialities">Specialities</NavDropdown.Item>
               <NavDropdown.Item href="/accesses">Accesses</NavDropdown.Item>
             </NavDropdown>
-            <NavLink disabled className="color-white">Not implemented</NavLink>
-            <NavLink disabled className="color-white">Not implemented</NavLink>
-            <NavLink disabled className="color-white">Not implemented</NavLink>
-            <NavLink disabled className="color-white">Not implemented</NavLink>
+            <NavLink disabled className="color-white">Patient Cabinet</NavLink>
+            <NavLink disabled className="color-white">Doctor Cabinet</NavLink>
+            <NavLink disabled className="color-white">Communication</NavLink>
+            <NavLink disabled className="color-white">Questionnaires</NavLink>
+            <NavLink disabled className="color-white">Analysis</NavLink>
             <div className="ms-auto d-flex  flex-grow-1 justify-content-end ">
               <button className="btn btn-danger btn-hover-red">
                 <a
